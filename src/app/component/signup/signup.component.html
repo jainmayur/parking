@@ -1,0 +1,39 @@
+<div class="container h-75">
+    <div class="row position-relative mx-auto login-container">
+      <div class="col-sm-12 h-100">
+        <form class='form h-100' (ngSubmit)="onSubmit()" #form="ngForm">
+            <div class="card rounded-0 app-login-form h-100">
+                <div class="card-body">
+                  <div class="form-group">
+                      <label for="user_name" class='text-white'>Username</label>
+                      <input type="text" [ngClass]="{'border border-danger': !username.valid && username.touched}" class="form-control form-control-lg form-field" name="user_name" id="user_name" required="" placeholder="username" autocomplete="off" ngModel #username="ngModel">
+                      <div class="invalid-feedback">Oops, you missed this one.</div>
+                  </div>
+                  <div class="form-group">
+                      <label for="email" class='text-white'>Email</label>
+                      <input type="email" class='form-control form-control-lg form-field' [ngClass]="{'border border-danger': !email.valid && email.touched}" name='email' id="email" required="" autocomplete="new-password" placeholder="john@example.com" ngModel #email="ngModel" email>
+                  </div>
+                  <div class="form-group">
+                      <label for="password" class='text-white'>Password</label>
+                      <input type="password" class="form-control form-control-lg form-field" id="password" required="" autocomplete="new-password" [ngClass]="{'border border-danger': !password.valid && password.touched}" name='password' ngModel #password='ngModel'>
+                      <div class="invalid-feedback">Enter your password too!</div>
+                  </div>
+                  <div class="form-group">
+                      <label for="confirm_password" class='text-white'>Confirm password</label>
+                      <input type="password" [ngClass]="{'border border-danger': !confirmPass.valid && confirmPass.touched}" class="form-control form-control-lg form-field" id="confirm_password" required="" autocomplete="new-password" name='confirmPass' ngModel #confirmPass="ngModel">
+                      <div class="invalid-feedback">Enter your password too!</div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" mat-stroked-button color='accent' class="btn login-btn mt-3 py-2" id="btn_login">Register</button>
+                  </div>
+                </div>
+            </div>
+        </form>
+      </div>
+      <div class="col-sm-12 mt-2">
+        <form class="form w-100 mx-auto">
+          <button type="button" mat-stroked-button color='accent' class="btn btn-block p-2 signup-button" id="signup" (click)="cancel()">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>

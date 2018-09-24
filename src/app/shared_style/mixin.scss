@@ -1,0 +1,106 @@
+//------------@mixins----------------
+
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+  
+@mixin container-area($width: null, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin position-style($pos, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $pos;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin font-base-style($size: false, $colour: false, $weight: false,  $lh: false) {
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+
+@mixin container-border($border-width: null, $border-style: solid, $border-color: null) {
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+}
+
+@mixin border-radius($border-radius) {
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    transition: $transition;
+}
+
+@mixin content-margin($margin-top: null, $margin-bottom: null, $margin-right: null, $margin-left: null) {
+    margin-top: $margin-top;
+    margin-bottom: $margin-bottom;
+    margin-right: $margin-right;
+    margin-left: $margin-left;
+}
+
+@mixin content-padding($padding-top: null, $padding-bottom: null, $padding-right: null, $padding-left: null) {
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    padding-right: $padding-right;
+    padding-left: $padding-left;
+}
+
+@mixin transform($transform...) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    transform: $transform
+}
+
+@mixin animation($animation...) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    animation: $animation;
+}
+
+@mixin responsive($breakpoint) {
+    @if ($breakpoint == md) {
+        @media (min-width: 768px) and (max-width: 960px) {
+        @content;
+        }
+    }
+    @else if ($breakpoint == lg) {
+        @media (min-width: 960px) and (max-width: 1100px) {
+        @content;
+        }
+    }
+    @else if ($breakpoint == sm) {
+        @media (min-width: 468px) and (max-width: 769px) {
+        @content;
+        }
+    }
+    @else if ($breakpoint == xs) {
+        @media only screen and (max-width: 467px) {
+        @content;
+        }
+    }
+}
+
+@mixin content-appearance($appearance) {
+    -webkit-appearance: $appearance;
+    -moz-appearance: $appearance;
+}
+
+@mixin text-shadow($shadow...) {
+    -webkit-text-shadow: $shadow;
+    -moz-text-shadow: $shadow;
+    text-shadow: $shadow;
+}

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark app-header">
+  <a class="navbar-brand" routerLink="/">PARKME.IN</a>
+  <button 
+    class="navbar-toggler" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto"></ul>
+    <form class="form-inline my-2 my-lg-0" >
+      <button 
+        type="button"
+        routerLink="/signup" 
+        mat-stroked-button 
+        color='accent' 
+        class='mr-2'
+      >
+        <i class="fa fa-user-plus" aria-hidden="true"></i>
+        <span class='d-lg-inline d-none ml-1'>Signup</span>
+      </button>
+      <button 
+        type="button" 
+        routerLink="/login" 
+        mat-stroked-button 
+        color='accent'
+      >
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        <span class='d-lg-inline d-none ml-1'>Login</span>
+      </button>
+    </form>
+  </div>
+</nav>

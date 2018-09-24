@@ -1,0 +1,36 @@
+<div class="container h-75">
+    <div class="row position-relative mx-auto login-container">
+      <div class="col-sm-12 h-100 mt-2">
+        <form class='form h-100' #form="ngForm">
+            <div class="card rounded-0 app-login-form h-100">
+                <div class="card-header form-header">
+                    <h3 class="mb-0 text-center text-white">Location</h3>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                      <label for="location" class='text-white'>Select your location</label>
+                      <input type="text" class="form-control form-control-lg form-field" name="location" id="location" required="" placeholder="Delhi" autocomplete="off" ngModel #location="ngModel" location>
+                      <div class="invalid-feedback">Oops, you missed this one.</div>
+                  </div>
+                  <div class="form-group">
+                      <label for="spot" class='text-white'>Select parking spot</label>
+                      <input type="text" class="form-control form-control-lg form-field" name="spot" id="spot" required="" autocomplete="new-spot" placeholder="Anand vihar" ngModel #spot="ngModel">
+                      <div class="invalid-feedback">Enter your spot too!</div>
+                  </div>
+                  <div class="form-group">
+                      <label for="date" class='text-white'>Select Date</label>
+                      <input type="date" class="form-control form-control-lg form-field" name="date" id="date" required="" autocomplete="new-date" ngModel #date="ngModel">
+                      <div class="invalid-feedback">Enter your date too!</div>
+                  </div>
+                </div>
+                <!--/card-block-->
+            </div>
+        </form>
+      </div>
+      <div class="col-sm-12 mt-2">
+        <form class="form w-100 mx-auto">
+          <button type="button" routerLink="/signup" mat-stroked-button color='accent' class="btn btn-block p-2 signup-button" id="signup">PARK ME</button>
+        </form>
+      </div>
+    </div>
+  </div>

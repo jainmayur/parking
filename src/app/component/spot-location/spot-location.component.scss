@@ -1,0 +1,31 @@
+@import "~src/app/shared_style/mixin.scss";
+
+.app-login-form {
+    background: #000000de;
+    .form-field {
+        background: #ffffff10;
+        @include container-border($border-color: #00000080);
+        @include font-base-style($size: 15px, $colour: white);
+        outline: none;
+        &:focus {
+            outline: none
+        }
+    }
+}
+.signup-button {
+    @include box-shadow(1px 14px 19px -9px #151515);
+    font-size: 16px;
+}
+.login-container {
+    top: 50px;
+    @include container-area(50%, null);
+    @include responsive(sm) {
+        @include container-area(85%, null);
+    }
+    @include responsive(xs) {
+        @include container-area(100%, null);
+    }
+}
+.mat-form-field-wrapper {
+    background: red!important;
+}
